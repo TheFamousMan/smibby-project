@@ -2784,3 +2784,45 @@ a {
     content: " (" attr(title) ")";
   }
 }
+
+.bubble
+{
+  position: relative;
+  width: 260px;
+  height: 165px;
+  padding: 0px;
+  background: #FFFFFF;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border-radius: 80px;
+  border: #5c0538 solid 2px;
+  z-index:-1;
+}
+
+.bubble:after
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 21px 13px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -21px;
+  left: 82px;
+}
+
+.bubble:before
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 23px 15px 0;
+  border-color: #5c0538 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  bottom: -26px;
+  left: 80px;
+}
