@@ -2795,8 +2795,9 @@ a {
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
   border-radius: 80px;
-  border: #5c0538 solid 2px;
+  border: #5c0538 solid 3px;
   z-index:-1;
+  font-weight: 300;
 }
 
 .bubble:after
@@ -2825,4 +2826,8 @@ a {
   z-index: 0;
   bottom: -26px;
   left: 80px;
+}
+.bubble p{
+  margin-top: 20px;
+  font-size: 1.2em;
 }
