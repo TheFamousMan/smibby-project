@@ -2790,7 +2790,7 @@ a {
   position: relative;
   width: 260px;
   height: 165px;
-  padding: 0px;
+  padding: 10px;
   background: #FFFFFF;
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
@@ -2828,6 +2828,6 @@ a {
   left: 80px;
 }
 .bubble p{
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 1.2em;
 }
