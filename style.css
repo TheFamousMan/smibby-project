@@ -15,7 +15,7 @@ button,
 input,
 select,
 textarea {
-  font-family: Signika;
+  font-family: 'Signika',sans-serif;
 }
 article,
 aside,
@@ -63,7 +63,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 body {
-  font-family: "Signika",Signika;
+  font-family: 'Signika',sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 22px;
@@ -74,6 +74,7 @@ body {
 }
 p {
   margin: 0 0 1em 0;
+  font-weight: 400px;
 }
 a {
   color: #2cc7c1;
@@ -97,7 +98,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Signika", Signika;
+  font-family: 'Signika',sans-serif;
   margin: 0;
 }
 h1,
@@ -108,8 +109,8 @@ h1,
   line-height: 2.375rem;
   margin-top: .7em;
   margin-bottom: .5em;
-  color: black;
-  font-weight: 400;
+  color: #5c0538;
+  font-weight: 700px;
 }
 h2,
 .h2 {
@@ -119,8 +120,8 @@ h2,
   line-height: 2.125rem;
   margin-top: 0;
   margin-bottom: .6em;
-  color: black;
-  font-weight: 400;
+  color: #c12742;
+  font-weight: 400px;
 }
 h3,
 .h3 {
@@ -450,7 +451,7 @@ input::-moz-focus-inner {
 }
 .button {
   border: 0;
-  background-color: #525b64;
+  background-color: #c12742;
   line-height: normal;
   padding: .8em 2em;
   text-decoration: none;
@@ -469,14 +470,14 @@ input::-moz-focus-inner {
 .button:active {
   text-decoration: none;
   color: #fff;
-  background-color: #3f464c;
+  background-color: #c12748;
 }
 .button-primary {
-  background-color: #f8504d;
+  background-color: #ed6032;
 }
 .button-primary:hover,
 .button-primary:active {
-  background-color: #f53a37;
+  background-color: #f1835f;
 }
 .button-link {
   color: #2cc7c1;
@@ -2098,7 +2099,7 @@ a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #ccc;
+  background-color: #5C0538;
   border-radius: 100%;
   position: relative;
 }
@@ -2157,7 +2158,7 @@ a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  color: #828282;
+  color: #5C0538;
 }
 .event-speaker-name:after {
   content: "";
@@ -2327,8 +2328,10 @@ a {
 .footer {
   padding-top: 3em;
   padding-bottom: 3em;
-  color: #f3f3f3;
-  background: #525b64;
+  color: #000;
+  background: #fff;
+  border-color: #5c0538;
+  border-style: solid;
 }
 .footer-content-blocks {
   padding-left: 15px;
@@ -2348,8 +2351,8 @@ a {
   font-size: 0.75rem;
   line-height: 20px;
   line-height: 1.25rem;
-  color: #ccc;
-  background: #3f464c;
+  color: #fff;
+  background: #5c0538;
   padding-top: .8em;
   padding-bottom: .8em;
 }
@@ -2360,6 +2363,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+  color: #000;
 }
 @media only screen and (min-width: 740px) {
   .banner {
