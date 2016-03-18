@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+
+$result = $mysqli->query("
+      SELECT *
+      FROM content
+      ");
+
+
+      while($content = $result->fetch_assoc()){
+
+echo '<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,7 +16,7 @@
   <title>Smibby | Your helping hand</title>
 
   <link rel="icon" type="image/png" href="img/smibby.png">
-  <meta name="description" content="Bemikasoftware brings a new app on the market 'Smibby' Smibby helps you with everyday tasks.">
+  <meta name="description" content="Bemikasoftware brings a new app on the market Smibby Smibby helps you with everyday tasks.">
   <meta name="keywords" content="Smibby,app,help,autism,alzheimer,forgetting,daily tasks,perform tasks,in order,helping hand,">
   <meta name="author" content="Smibby">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +27,6 @@
 
   <link rel="stylesheet" href="style.css">
   <!-- FONTS -->
-  <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Signika:400,600,700,300" rel="stylesheet" type="text/css">
 
 </head>
@@ -52,12 +61,12 @@
 <div class="banner">
   <div class="container text-center">
     <h1 id="logo" class="logo"><img width="200px" src="img/logo.png" alt=""></h1>
-    <h2 class="banner-heading" style="color:#5C0538;">Your helping hand</h2>
+    <h2 class="banner-heading" style="color:#5C0538;">'.$content['h_text1'].'</h2>
     <p class="p-big col-8-tablet col-6-desktop no-float center-element">
-      <strong>Smibby</strong> is your personal helping hand when performing your daily tasks. <strong>Smibby</strong> will help you ease your life. You <strong>won't</strong> forget a single thing! 
+      '.$content['h_text2'].'
     </p>
     <div class="banner-buttons">
-      <a class="button" href="#download">Download App</a>
+      <a class="button" href="#download">'.$content['h_btn1'].'</a>
     </div>
   </div>
 </div>
@@ -65,12 +74,12 @@
 <div class="gallery-block content-block container row-5-desktop" id="who">
     <div class="clear">
       <div class="col-5-desktop">
-        <h1>Who are we?</h1>
+        <h1>'.$content['who_text1'].'</h1>
         <p class="p-big">
-          Smibby helps you with
+          '.$content['who_text2'].'
         </p>
         <p>
-          We are Bemikasoftware and we have brought you a new app called <strong>'Smibby'</strong>. Smibby will facilitate your life and guide you in performing daily tasks.
+          '.$content['who_text3'].'
         </p>
       </div>
       <div class="col-6-desktop right-desktop row-2 row-0-tablet">
@@ -107,12 +116,12 @@
     <div class="clear">
       <div class="col-6-desktop">
         <div class="col-11 no-float no-padding">
-          <h1>What is Smibby?</h1>
+          <h1>'.$content['what_text1'].'</h1>
           <p class="p-big">
-            Smibby helps you with
+            '.$content['what_text2'].'
           </p>
           <p>
-            <strong>Smibby</strong> is your personal helping hand, when performing your daily tasks. <strong>Smibby</strong> will help you ease your life, so you <strong>won't</strong> forget a single thing! 
+            '.$content['what_text3'].'
           </p>
         </div>
       </div>
@@ -132,7 +141,7 @@
                   <ul>
                     <li>Always have your tasks in your hand.</li>
                     <li>Perform your tasks step-by-step.</li>
-                    <li>Always help with the app '<strong>Smibby</strong>'.</li>
+                    <li>Always help with the app <strong>Smibby</strong>.</li>
                     <li>Enter and modify tasks is always possible.</li>
                   </ul>
                 </div>
@@ -147,7 +156,7 @@
                   <ul>
                     <li>The tasks can be added or created by the supervisors of the incapacitated person. </li>
                     <li>They can also ensure whether they have completed these tasks and whether they need help or not.</li>
-                    <li>Those who need help can press an emergency button in the app '<strong>Smibby</strong>' to ask for help.</li>
+                    <li>Those who need help can press an emergency button in the app <strong>Smibby</strong> to ask for help.</li>
                     <li>Enter and modify tasks is always possible.</li>
                   </ul>
                 </div>
@@ -164,58 +173,58 @@
 
   <div class="speakers-block row-6 container" id="reviews">
     <div class="text-center">
-      <h1>Reviews</h1>
+      <h1>'.$content['review_text1'].'</h1>
       <p class="p-big">
-        Smibby helps you with
+        '.$content['review_text2'].'
       </p>
     </div>
     <ul class="event-speakers clear">
       <li class="col-6-tablet col-3-desktop">
         <div class="col-12-tablet no-float">
         <blockquote class="bubble">
-          <p>I'm Jimmy, I work in healthcare and have many profit of this service.</p>
+          <p>'.$content['review_say1'].'</p>
         </blockquote>
           <a class="event-speaker" href="#">
             <img class="block" src="img/nathan.jpg" alt="Edward">
           </a>
-          <h3 class="uppercase h4"><a class="event-speaker-name" href="#">Jimmy</a></h3>
-          <p>Lisse</p>
+          <h3 class="uppercase h4"><a class="event-speaker-name" href="#">'.$content['review_prs1'].'</a></h3>
+          <p>'.$content['review_plc1'].'</p>
         </div>
       </li>
       <li class="col-6-tablet col-3-desktop">
         <div class="col-12-tablet no-float">
         <blockquote class="bubble">
-          <p>I'm Marijke, a graduated doctor. Smibby is guaranteed a helping hand.</p>
+          <p>'.$content['review_say2'].'</p>
         </blockquote>
           <a class="event-speaker" href="#">
             <img class="block" src="img/nathan_2.jpg" alt="Lucy">
           </a>
-          <h3 class="uppercase h4"><a class="event-speaker-name" href="#">Marijke</a></h3>
-          <p>Den Haag</p>
+          <h3 class="uppercase h4"><a class="event-speaker-name" href="#">'.$content['review_prs2'].'</a></h3>
+          <p>'.$content['review_plc2'].'</p>
         </div>
       </li>
       <li class="col-6-tablet col-3-desktop">
         <div class="col-12-tablet no-float">
         <blockquote class="bubble">
-          <p>I'm Barbara, I am grandmother of two grandchildren with autism. Smibby has taken a lot of work for me.</p>
+          <p>'.$content['review_say3'].'</p>
         </blockquote>
           <a class="event-speaker" href="#">
             <img class="block" src="img/nathan_3.png" alt="Nathan">
           </a>
-          <h3 class="uppercase h4"><a class="event-speaker-name" href="#">Barbara</a></h3>
-          <p>Amstelveen</p>
+          <h3 class="uppercase h4"><a class="event-speaker-name" href="#">'.$content['review_prs3'].'</a></h3>
+          <p>'.$content['review_plc3'].'</p>
         </div>
       </li>
       <li class="col-6-tablet col-3-desktop">
         <div class="col-12-tablet no-float">
         <blockquote class="bubble">
-          <p>I'm Quinty, I have a twin sister(see photo). By using this app, I can help her more.</p>
+          <p>'.$content['review_say4'].'</p>
         </blockquote>
           <a class="event-speaker" href="#">
             <img class="block" src="img/nathan_4.png" alt="Jacob">
           </a>
-          <h3 class="uppercase h4"><a class="event-speaker-name" href="#">Quinty</a></h3>
-          <p>Amsterdam</p>
+          <h3 class="uppercase h4"><a class="event-speaker-name" href="#">'.$content['review_prs4'].'</a></h3>
+          <p>'.$content['review_plc4'].'</p>
         </div>
       </li>
     </ul>
@@ -238,9 +247,9 @@
           <div class="col-12-desktop no-float-desktop">
             <h3 class="h4 h-black">Get in touch</h3>
             <ul class="contact-list">
-              <li><a style="color:black;" class="footer-link icon icon-left icon-phone" href="#">+31 615 903 891</a></li>
-              <li><a style="color:black;" class="footer-link icon icon-left icon-email" href="#">contact@smibby.com</a></li>
-              <li><a style="color:black;" class="footer-link icon icon-left icon-skype" href="#">Helpdesk</a></li>
+              <li><a style="color:black;" class="footer-link icon icon-left icon-phone" href="#">'.$content['tel'].'</a></li>
+              <li><a style="color:black;" class="footer-link icon icon-left icon-email" href="#">'.$content['mail'].'</a></li>
+              <li><a style="color:black;" class="footer-link icon icon-left icon-skype" href="#">'.$content['desk'].'</a></li>
             </ul>
           </div>
         </div>
@@ -275,4 +284,8 @@
 
 
 </body>
-</html>
+</html>';
+
+};
+
+?>
